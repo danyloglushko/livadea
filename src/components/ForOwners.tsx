@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import businessOwnerMeeting from '@/assets/business-owner-meeting.jpg';
+import texasRanchSunset from '@/assets/texas-ranch-sunset.jpg';
 
 export const ForOwners = () => {
   return (
@@ -66,8 +66,8 @@ export const ForOwners = () => {
           <div className="relative">
             <div className="aspect-[4/5] rounded-lg overflow-hidden shadow-elegant">
               <img
-                src={businessOwnerMeeting}
-                alt="Family-owned small business storefront"
+                src={texasRanchSunset}
+                alt="Beautiful Texas ranch at sunset"
                 className="w-full h-full object-cover"
               />
             </div>

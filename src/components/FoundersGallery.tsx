@@ -1,66 +1,52 @@
 import foundersLondon from '@/assets/founders-london.jpeg';
 import foundersVienna from '@/assets/founders-vienna.jpeg';
-import foundersCalifornia from '@/assets/founders-california.jpeg';
-
-const photos = [
-  {
-    src: foundersLondon,
-    alt: 'The founders exploring London with family',
-    location: 'London',
-  },
-  {
-    src: foundersVienna,
-    alt: 'The founders together in Vienna',
-    location: 'Vienna',
-  },
-  {
-    src: foundersCalifornia,
-    alt: 'Family moments in California',
-    location: 'California',
-  },
-];
 
 export const FoundersGallery = () => {
   return (
     <section className="section-padding bg-card">
       <div className="container-wide">
-        {/* Header */}
-        <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
-          <p className="eyebrow mb-4">Real People, Real Relationships</p>
-          <h2 className="heading-section text-forest mb-6">
-            Built on Family, Grounded in Trust
-          </h2>
-          <div className="divider-elegant mb-8" />
-          <p className="body-regular text-muted-foreground max-w-2xl mx-auto">
-            Behind Livadea is a family that values perspective, connection, and the long view. 
-            We believe that how you live shapes how you work — and we bring that same care 
-            to the businesses and people we partner with.
-          </p>
-        </div>
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Content */}
+          <div className="order-2 lg:order-1">
+            <p className="eyebrow mb-4">Real People, Real Stewardship</p>
+            <h2 className="heading-section text-forest mb-6">
+              We Show Up
+            </h2>
+            <div className="space-y-6 body-regular text-muted-foreground">
+              <p>
+                Livadea isn't a fund or a faceless institution. It's us — a husband-and-wife team 
+                who believe that relationships are built in person, over time, and with genuine care.
+              </p>
+              <p>
+                We travel to meet the people we work with. We invest in long-term relationships — 
+                with business owners, with teams, and with the communities where we operate. 
+                That's how we've always worked, and it's how we'll continue.
+              </p>
+              <p className="text-forest font-medium">
+                When you partner with Livadea, you're partnering with people who answer their own phone.
+              </p>
+            </div>
+          </div>
 
-        {/* Photo Grid */}
-        <div className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
-          {photos.map((photo, index) => (
-            <div
-              key={index}
-              className="group relative overflow-hidden rounded-lg shadow-elegant"
-            >
-              <div className="aspect-[4/5] overflow-hidden">
+          {/* Photos */}
+          <div className="order-1 lg:order-2">
+            <div className="grid grid-cols-2 gap-4">
+              <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-elegant">
                 <img
-                  src={photo.src}
-                  alt={photo.alt}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  src={foundersLondon}
+                  alt="The founders building relationships abroad"
+                  className="w-full h-full object-cover"
                 />
               </div>
-              {/* Subtle overlay with location */}
-              <div className="absolute inset-0 bg-gradient-to-t from-forest/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="text-white/90 text-sm font-medium tracking-wide">
-                  {photo.location}
-                </span>
+              <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-elegant mt-8">
+                <img
+                  src={foundersVienna}
+                  alt="The founders investing in long-term connections"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>

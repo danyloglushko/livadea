@@ -1,4 +1,4 @@
-import handshakeImage from '@/assets/handshake.jpg';
+import heritageTreeImage from '@/assets/heritage-tree.jpg';
 
 export const Approach = () => {
   const steps = [
@@ -46,8 +46,8 @@ export const Approach = () => {
           <div className="relative order-2 lg:order-1">
             <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-elegant">
               <img
-                src={handshakeImage}
-                alt="Business partnership handshake"
+                src={heritageTreeImage}
+                alt="A majestic oak tree with deep roots symbolizing longevity and stewardship"
                 className="w-full h-full object-cover"
               />
             </div>

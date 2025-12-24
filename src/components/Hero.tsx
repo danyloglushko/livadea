@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/hero-texas-landscape.jpg';
+import { Check } from 'lucide-react';
 
 export const Hero = () => {
   return (
@@ -23,31 +24,50 @@ export const Hero = () => {
           </p>
 
           {/* Main Headline */}
-          <h1 className="heading-display text-cream mb-8 opacity-0 animate-fade-up animation-delay-200 text-balance">
+          <h1 className="heading-display text-cream mb-6 opacity-0 animate-fade-up animation-delay-200 text-balance">
             Built for the Long Road
           </h1>
 
-          {/* Subheadline */}
-          <p className="body-large text-cream/85 mb-12 max-w-2xl mx-auto opacity-0 animate-fade-up animation-delay-400">
-            Livadea Holdings acquires and operates businesses with a generational mindset — 
-            preserving legacies, caring for people, and building something enduring.
+          {/* Sharper Subheadline */}
+          <p className="body-large text-cream/90 mb-8 max-w-3xl mx-auto opacity-0 animate-fade-up animation-delay-400">
+            We acquire and operate small-to-mid sized businesses in Central Texas — 
+            for owners ready to transition with confidence, not compromise.
           </p>
+
+          {/* Proof Bullets */}
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center mb-10 opacity-0 animate-fade-up animation-delay-500">
+            <div className="flex items-center gap-2 text-cream/85">
+              <Check className="w-4 h-4 text-gold-light" />
+              <span className="text-sm">Long-term hold, no flip</span>
+            </div>
+            <div className="flex items-center gap-2 text-cream/85">
+              <Check className="w-4 h-4 text-gold-light" />
+              <span className="text-sm">Operator mindset</span>
+            </div>
+            <div className="flex items-center gap-2 text-cream/85">
+              <Check className="w-4 h-4 text-gold-light" />
+              <span className="text-sm">Confidential process</span>
+            </div>
+          </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-up animation-delay-600">
-            <Button
-              variant="hero"
-              size="xl"
-              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Our Story
-            </Button>
+            <div className="flex flex-col items-center">
+              <Button
+                variant="hero"
+                size="xl"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Request a Private Intro Call
+              </Button>
+              <span className="text-cream/60 text-xs mt-2">Confidential. No brokers. 15 minutes.</span>
+            </div>
             <Button
               variant="heroOutline"
               size="xl"
-              onClick={() => document.getElementById('for-owners')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              For Business Owners
+              Learn More
             </Button>
           </div>
         </div>

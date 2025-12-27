@@ -16,8 +16,8 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         // Livadea custom variants
-        hero: "bg-cream/95 text-forest font-medium hover:bg-cream border border-cream/20 shadow-elegant",
-        heroOutline: "border-2 border-cream/80 text-cream font-medium hover:bg-cream/10 backdrop-blur-sm",
+        hero: "bg-cream text-forest font-medium hover:bg-cream border border-cream/30 shadow-elegant hover:shadow-xl active:scale-[0.98]",
+        heroOutline: "border-2 border-cream/70 text-cream font-medium hover:bg-cream/15 hover:border-cream backdrop-blur-sm",
         elegant: "bg-forest text-cream font-medium hover:bg-forest-light tracking-wide",
         gold: "bg-gold text-cream font-medium hover:bg-gold-light",
       },
